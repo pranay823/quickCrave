@@ -7,8 +7,7 @@ const useGetRestroData =()=>{
 
     const {lat , lng} = useSelector(store => store.map)
     const dispatch = useDispatch()
-    if( !lat && !lng) console.log("no lat and lng");
-
+  
 
     let API_URL = ""
 

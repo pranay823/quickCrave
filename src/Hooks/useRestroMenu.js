@@ -16,7 +16,7 @@ useEffect(()=>{
 const fetchRestro =async()=>{
 const data = await fetch(MenuURL + resid)
 const json = await data.json();
-console.log(json)
+
 dispatch(loadRestroMenu(json?.data)) }
 
 }
