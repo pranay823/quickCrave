@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import {  getAuth, signOut ,onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
    const navigate = useNavigate()
    const [isLogIn, setisLogIn] =  useState(false)
+   const cartitems = useSelector(state=>state.cart.items)
+   const totalItems = cartitems.reduce((total,item)=>(
+   total + item.quantity
+   ),0)
   
 
    useEffect(()=>{
@@ -43,10 +48,10 @@ const Header = () => {
     </div>
     <div className='border w-3/4 flex' >
     <ul className='flex justify-between w-3/4  text-2xl p-8 text-light-grey font-serif '>
-      <li className=' hover:text-main_color ease-in duration-100  '>Home</li>
+    <Link to={'/homepage'}><li className=' hover:text-main_color ease-in duration-100  '>Home</li></Link>
       <li className=' hover:text-main_color ease-in duration-100  '>About us</li>
       <li className=' hover:text-main_color ease-in duration-100  '>Contact us</li>
-      <li className=' hover:text-main_color ease-in duration-100  '>Cart</li>
+     <Link to={'/Cart'}> <li className=' hover:text-main_color ease-in duration-100  '>Cart[{totalItems}]</li></Link>
     </ul>
    {/* <p className='p-8 text-xl '>test</p> */}
     {isLogIn && <button onClick={handleSignOut}

@@ -9,14 +9,15 @@ import Header from './components/Header';
 import { Provider } from 'react-redux';
 import appStore from './Utils/appStore';
 import RestroMenu from './components/RestroMenu';
+import Cart from './components/Cart';
 
 
 
 const AppLayout=()=>{
   return(
   <div className='app'>
+     <Provider store={appStore} >
     <Header />
-    <Provider store={appStore} >
     <Outlet />
     </Provider>
   </div>
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
     {
       path:'/restaurants/:resid',
       element : <RestroMenu />
+    },
+    {
+      path: '/cart',
+      element : <Cart/>
     }
    ]
   }
