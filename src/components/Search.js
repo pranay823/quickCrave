@@ -17,13 +17,15 @@ const Search = () => {
 
 
   return (
-    <div className='w-1/3 bg-main_color rounded-full mx-auto mt-6 '>
+    <div className='flex mt-12  '>
+    <div className='w-1/3 bg-main_color rounded-full mx-auto  '>
     <input ref={city} className="p-4 w-3/4 border border-black outline-none rounded-full" 
     type="search" placeholder="Enter the location">
          </input>
     <button onClick={searchHandler}
      className='w-1/4 bg-main_color p-4 rounded-full text-lg font-serif   '
       type='submit'>Enter</button>
+</div>
 </div>
   )
 }

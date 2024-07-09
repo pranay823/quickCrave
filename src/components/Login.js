@@ -56,7 +56,7 @@ const Login=()=>{
     return(
        <div className=" w-1/3  mx-auto my-28  min-w-[400px]">
        <div>
-        <h1 className=" text-2xl md:text-5xl text-text_color tracking-wider font-semibold">{isSignIn?"Login":"Sign up"}</h1>
+        <h1 className=" text-center text-2xl md:text-5xl text-text_color tracking-wider font-semibold">{isSignIn?"Login":"Sign up"}</h1>
        </div>
        <div className="m-8 ">
         {!isSignIn && <input type="text" 

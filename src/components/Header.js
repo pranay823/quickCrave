@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 const Header = () => {
    const navigate = useNavigate()
    const [isLogIn, setisLogIn] =  useState(false)
+   const location = useSelector(store=>store.map.location)
    const cartitems = useSelector(state=>state.cart.items)
    const totalItems = cartitems.reduce((total,item)=>(
    total + item.quantity
@@ -42,9 +43,10 @@ const Header = () => {
 
   return (
     <div className=' flex justify-between shadow-xl ' >
-    <div className=''>
+    <div className='flex '>
      <img className='w-24 p-2'
       src='https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_192,h_192/portal/c/logo_2022.png' alt="logo"></img>
+        <p className='border-2 font-bold border-main_color py-2 px-4 text-xl my-6 '>Location : {location}</p>
     </div>
     <div className='border w-3/4 flex' >
     <ul className='flex justify-between w-3/4  text-2xl p-8 text-light-grey font-serif '>

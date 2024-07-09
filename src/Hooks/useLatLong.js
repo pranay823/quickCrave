@@ -22,7 +22,8 @@ const useLatLong =(location)=>{
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        dispatch(latitude_longitude({latitude : result.results[0].location.lat , longitude : result.results[0].location.lng}))
+        console.log(result)
+        dispatch(latitude_longitude({latitude : result.results[0].location.lat , longitude : result.results[0].location.lng , location : result.results[0]?.locality}))
 
     } catch (error) {
         console.error(error);

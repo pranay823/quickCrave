@@ -41,14 +41,6 @@ const RestroCards = () => {
   })
   setrestroList(sortedRestro)
  }
- 
-
-
-
-
-
- 
-
 
   const searchHandler=(e)=>{
   const searchResult =allRestro.filter((restro)=> restro.info.name.toLowerCase().includes(e.target.value.toLowerCase()));
@@ -58,7 +50,7 @@ const RestroCards = () => {
 
   return (
     <div className='mx-16 mt-10 '>
-        <div className=' h-14 flex'>
+        <div className=' h-14 flex   '>
   
          <select onChange={(e)=>{selectHandler(e)}}
           className='bg-main_color p-3 font-medium outline-none font-serif tracking-wider m-1'  >
@@ -73,7 +65,7 @@ const RestroCards = () => {
         </div>
          </div>
      
-        <div className='flex flex-wrap  gap-4   '>
+        <div className='flex flex-wrap  gap-4 justify-start    '>
             {restroList?.map((restro)=>(
              <Link to={'/restaurants/'+restro.info.id}  key={restro.info.id} className="flex" >
               <Card data={restro?.info} />
