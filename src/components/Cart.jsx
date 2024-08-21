@@ -14,14 +14,14 @@ const Cart = () => {
     console.log(items)
     if(items.length === 0 ){
         return(
-            <div className=' flex flex-col mx-auto  mt-60 w-1/3'>
+            <div className=' flex flex-col mx-auto  mt-60 w-1/3 '>
                 <h1 className='text-3xl font-bold text-center mb-3'>No Items in Cart </h1>
                 <button onClick={()=>{navigate('/homepage')}} className='bg-main_color p-2  '>See Restaurants</button>
             </div>
         )
     }
   return (
-    <div className='w-1/2 border border-black mx-auto my-20 shadow-2xl  '>
+    <div className='w-1/2 border border-black mx-auto my-20 shadow-2xl min-w-[400px]    '>
        <div className=' bg-main_color p-4 shadow-lg '>
        <h1 className='text-2xl text-center'>Cart Items</h1>
        <div>

@@ -49,16 +49,16 @@ const RestroCards = () => {
 
 
   return (
-    <div className='mx-16 mt-10 '>
-        <div className=' h-14 flex   '>
+    <div className='mx-16 mt-10  '>
+        <div className=' h-14 flex md:flex-row flex-col md:mb-0 mb-16    '>
   
          <select onChange={(e)=>{selectHandler(e)}}
-          className='bg-main_color p-3 font-medium outline-none font-serif tracking-wider m-1'  >
+          className='bg-main_color p-3 font-medium  outline-none font-serif tracking-wider m-1'  >
           <option >Filters</option>
            <option >Low to High</option>
            <option> High to Low</option>
          </select>
-        <div className='w-72 flex m-1'>
+        <div className='md:w-72 flex m-1'>
           <input className='p-3 border border-black w-3/4 outline-none' onChange={(e)=>{searchHandler(e)}}
            type="search" placeholder='Search Restaurants'></input>
            <button  className='bg-main_color w-1/4 ' type='submit'>Search</button>

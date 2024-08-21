@@ -18,7 +18,7 @@ const Search = () => {
 
   return (
     <div className='flex mt-12  '>
-    <div className='w-1/3 bg-main_color rounded-full mx-auto  '>
+    <div className='md:w-1/3 min-w-[400px] mx-5   bg-main_color rounded-full md:mx-auto  '>
     <input ref={city} className="p-4 w-3/4 border border-black outline-none rounded-full" 
     type="search" placeholder="Enter the location">
          </input>

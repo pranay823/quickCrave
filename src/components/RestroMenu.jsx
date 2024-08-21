@@ -22,7 +22,7 @@ if(restroData == null) return <ShimmerUI />
 
 
   return (
-    <div className='w-1/2 mx-auto border border-black mt-6'>
+    <div className='w-1/2 md:mx-auto border border-black mt-6 min-w-[400px] mx-6  '>
     {/* <div className='flex justify-between p-2'>
         <div>
             <h1 className='text-2xl font-extrabold'>{name}</h1>

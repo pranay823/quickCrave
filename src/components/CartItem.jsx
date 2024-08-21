@@ -21,7 +21,7 @@ const CartItem = ({itemData}) => {
   }
 
   return (
-    <div className='flex justify-between py-2 px-4 bg-white m-4'>
+    <div className='flex justify-between py-2 px-4 bg-white m-4 gap-2 md:gap-0 ' >
     <img className='w-20 h-20' src={CDN_URL+imageId} onError={(e)=>{e.target.src = dummy_img} }></img>
     <p className='text-xl mt-5 '>{name}</p>
     <p className='mt-5 text-xl'>₹{price ? price/100 : defaultPrice/100}</p>
